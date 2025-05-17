@@ -1,5 +1,2 @@
-from typing import List
-
-
-def sort_list(numbers: List[int]) -> List[int]:
+def sort_list(numbers: list[int]) -> list[int]:
     return sorted(numbers, key=lambda x: x)
