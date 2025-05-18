@@ -18,4 +18,4 @@ def test_sort_list_duplicates():
 
 
 def test_sort_list_negative_numbers():
-    assert sort_list([-1, -3, 2, 0]) == [-3, -1, 0, 2]
+    assert sort_list([-1, -3, 4, 0]) == [-3, -1, 0, 4]
