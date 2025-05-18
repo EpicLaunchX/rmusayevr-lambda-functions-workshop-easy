@@ -1,5 +1,6 @@
 from src.pytemplate.utils.filtering import filter_even_numbers
 from src.pytemplate.utils.mapping import map_square
+from src.pytemplate.utils.sort_by_length import sort_by_length
 from src.pytemplate.utils.sorting import sort_list
 
 
@@ -57,3 +58,19 @@ def test_map_square_negative():
 
 def test_map_square_mixed():
     assert map_square([-2, 0, 3]) == [4, 0, 9]
+
+
+def test_sort_by_length_basic():
+    assert sort_by_length(["a", "abc", "ab"]) == ["a", "ab", "abc"]
+
+
+def test_sort_by_length_empty_list():
+    assert sort_by_length([]) == []
+
+
+def test_sort_by_length_same_length():
+    assert sort_by_length(["aa", "bb", "cc"]) == ["aa", "bb", "cc"]
+
+
+def test_sort_by_length_mixed():
+    assert sort_by_length(["apple", "a", "banana", "kiwi"]) == ["a", "kiwi", "apple", "banana"]
